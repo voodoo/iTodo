@@ -1,0 +1,74 @@
+ul li {
+    background-color: #ffeab1;
+    font-family: "Marker Felt";
+    color: #000;
+    border-top: 1px solid #a2a14d;
+}
+ul li input[type="checkbox"] {
+    background-color: #e8a322;
+    border: 2px solid #e8a322;
+}
+
+ul li input[type="text"], ul li textarea {
+    background-color: #ffeab1;
+}
+textarea {
+    background-color: #e8a322;
+}
+
+.complete span {
+    text-decoration: line-through;
+}
+
+li small {
+    opacity: 0;
+    overflow: hidden;
+    width: 0 !important;
+    -webkit-transition: 250ms all ease-in-out;
+}
+
+li.editingmode small {
+    opacity: 1;
+    width: 50% !important;
+}
+
+.toolbar {
+    background: url(/images/toolbar.png);
+    border: 0;
+    border-bottom: 1px solid #000;
+}
+
+body > .edgetoedge, body > * {
+    background: #ffeab1 none;
+}
+
+body .toolbar .btn2 {
+    -webkit-border-radius: 5px;
+    -webkit-border-image: none;
+    display: block;
+    background: rgba(40, 29, 25, .4) none !important;
+    padding: 6px;
+    border: 1px solid #372823;
+    float: left;
+    color: #fff;
+    -webkit-box-shadow: rgba(255,255,255, .4) 0 1px 0;
+    text-decoration: none;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 13px;
+    text-shadow: #000 0 -1px 0;
+    display: inline;
+}
+
+.btn2.active {
+    background-color: rgba(0,0,0,.5);
+}
+
+.edgetoedge h4 {
+    border: 0;
+    background: url(/images/toolbar.png);
+    color: #ffeab1;
+    border-bottom: 1px solid #9d7062;
+    border-top: 1px solid #9d7062;
+}

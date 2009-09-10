@@ -1,0 +1,10 @@
+<!doctype html>
+%html
+  %head
+    %meta{ :charset => "UTF-8" }
+    %title
+      jQTodo &beta;
+    = stylesheet_link_tag 'jqtouch', 'themes/apple/theme', 'todo'
+    = javascript_include_tag 'jquery', 'jqtouch', 'todo'
+  %body
+    = yield
