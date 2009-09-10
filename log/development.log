@@ -41596,3 +41596,53 @@ RuntimeError (Called id for nil, which would mistakenly be 4 -- if you really wa
 Rendered rescues/_trace (195.0ms)
 Rendered rescues/_request_and_response (0.4ms)
 Rendering rescues/layout (internal_server_error)
+
+
+Processing TodosController#index (for 127.0.0.1 at 2009-09-10 12:57:15) [GET]
+  [4;36;1mTodo Load (0.3ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."token" = '30plyz') LIMIT 1[0m
+  [4;35;1mTodo Create (0.6ms)[0m   [0mINSERT INTO "todos" ("updated_at", "token", "ip", "agent", "created_at") VALUES('2009-09-10 17:57:15', '30plyz', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_8; en-us) AppleWebKit/531.9 (KHTML, like Gecko) Version/4.0.3 Safari/531.9', '2009-09-10 17:57:15')[0m
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("updated_at", "todo_id", "body", "complete", "created_at") VALUES('2009-09-10 17:57:15', 15, 'Bookmark this page so you can come back and edit', 'f', '2009-09-10 17:57:15')[0m
+Redirected to http://localhost:3000/todos/30plyz
+Completed in 49ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2009-09-10 12:57:15) [GET]
+  Parameters: {"id"=>"30plyz"}
+  [4;35;1mTodo Load (0.4ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."token" = '30plyz') LIMIT 1[0m
+Rendering template within layouts/todos
+Rendering todos/show
+  [4;36;1mItem Load (0.5ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items"."complete" = 'f') AND ("items".todo_id = 15) [0m
+Rendered items/_item (2.5ms)
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM "items" WHERE ("items"."complete" = 't') AND ("items".todo_id = 15) [0m
+Completed in 44ms (View: 35, DB: 1) | 200 OK [http://localhost/todos/30plyz]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-09-10 12:57:18) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 150ms (View: 148, DB: 0) | 200 OK [http://localhost/about]
+
+
+Processing TodosController#index (for 127.0.0.1 at 2009-09-10 12:59:12) [GET]
+  [4;36;1mTodo Load (0.3ms)[0m   [0;1mSELECT * FROM "todos" WHERE ("todos"."token" = '54afsz') LIMIT 1[0m
+  [4;35;1mTodo Create (0.6ms)[0m   [0mINSERT INTO "todos" ("updated_at", "token", "ip", "agent", "created_at") VALUES('2009-09-10 17:59:12', '54afsz', '127.0.0.1', 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_5_8; en-us) AppleWebKit/531.9 (KHTML, like Gecko) Version/4.0.3 Safari/531.9', '2009-09-10 17:59:12')[0m
+  [4;36;1mItem Create (0.4ms)[0m   [0;1mINSERT INTO "items" ("updated_at", "todo_id", "body", "complete", "created_at") VALUES('2009-09-10 17:59:12', 16, 'Bookmark this page so you can come back and edit', 'f', '2009-09-10 17:59:12')[0m
+Redirected to http://localhost:3000/todos/54afsz
+Completed in 49ms (DB: 1) | 302 Found [http://localhost/]
+
+
+Processing TodosController#show (for 127.0.0.1 at 2009-09-10 12:59:13) [GET]
+  Parameters: {"id"=>"54afsz"}
+  [4;35;1mTodo Load (0.5ms)[0m   [0mSELECT * FROM "todos" WHERE ("todos"."token" = '54afsz') LIMIT 1[0m
+Rendering template within layouts/todos
+Rendering todos/show
+  [4;36;1mItem Load (0.8ms)[0m   [0;1mSELECT * FROM "items" WHERE ("items"."complete" = 'f') AND ("items".todo_id = 16) [0m
+Rendered items/_item (2.5ms)
+  [4;35;1mItem Load (0.3ms)[0m   [0mSELECT * FROM "items" WHERE ("items"."complete" = 't') AND ("items".todo_id = 16) [0m
+Completed in 40ms (View: 30, DB: 2) | 200 OK [http://localhost/todos/54afsz]
+
+
+Processing HomeController#index (for 127.0.0.1 at 2009-09-10 12:59:14) [GET]
+Rendering template within layouts/application
+Rendering home/index
+Completed in 66ms (View: 64, DB: 0) | 200 OK [http://localhost/about]
