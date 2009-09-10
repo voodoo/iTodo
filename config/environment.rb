@@ -9,9 +9,9 @@ require File.join(File.dirname(__FILE__), 'boot')
 Rails::Initializer.run do |config|
   config.gem 'haml'
   config.gem 'will_paginate'
-  config.gem 'justinfrench-formtastic', :lib => 'formtastic', 
-    :source => 'http://gems.github.com'
-  config.gem 'josevalim-inherited_resources', :lib => 'inherited_resources', 
-    :source => 'http://gems.github.com'
+  # config.gem 'justinfrench-formtastic', :lib => 'formtastic', 
+  #   :source => 'http://gems.github.com'
+  # config.gem 'josevalim-inherited_resources', :lib => 'inherited_resources', 
+  #   :source => 'http://gems.github.com'
   config.time_zone = 'UTC'
 end
