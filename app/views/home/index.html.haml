@@ -1,0 +1,392 @@
+#home
+  .toolbar
+    %h1
+      jQTouch
+    %a.back{ :href => "/" }
+      Todo      
+    %a#infoButton.button.slideup{ :href => "#about" }
+      About
+  %ul
+    %li.arrow
+      %a{ :href => "#ui" }
+        User Interface
+      %small.counter
+        5
+    %li.arrow
+      %a{ :href => "#ajax" }
+        AJAX
+      %small.counter
+        3
+    %li.arrow
+      %a{ :href => "#callbacks" }
+        Callback Events
+      %small.counter
+        3
+    %li.arrow
+      %a{ :href => "#demos" }
+        Demos
+      %small.counter
+        2
+  %h2
+    External Links
+  %ul
+    %li.forward
+      %a{ :href => "http://www.jqtouch.com/", :target => "_blank" }
+        Homepage
+    %li.forward
+      %a{ :href => "http://www.twitter.com/jqtouch", :target => "_blank" }
+        Twitter
+    %li.forward
+      %a{ :href => "http://code.google.com/p/jqtouch/w/list", :target => "_blank" }
+        Google Code
+  %ul.individual
+    %li
+      %a{ :href => "mailto:dk@morfunk.com", :target => "_blank" }
+        Email
+    %li
+      %a{ :href => "http://tinyurl.com/support-jqt", :target => "_blank" }
+        Donate
+  .info
+    %p
+      Add this page to your home screen to view the custom icon, startup screen, and full screen mode.
+#callbacks
+  .toolbar
+    %h1
+      Events
+    %a.back{ :href => "#home" }
+      Home
+  %ul
+    %li
+      %a{ :href => "#pageevents" }
+        Page events
+    %li#swipeme
+      Swipe me!
+    %li#orient
+      Orientation:
+      %strong
+        profile
+#demos
+  .toolbar
+    %h1
+      Demos
+    %a.back{ :href => "#home" }
+      Home
+  .info
+    These apps open in a new window. Don’t forget to save them to your home screen to enable full-screen mode.
+  %ul
+    %li.forward
+      %a{ :href => "/todos", :target => "_blank" }
+        To do app
+    %li.forward
+      %a{ :href => "../clock/", :target => "_blank" }
+        Clock app
+#pageevents
+  .toolbar
+    %h1
+      Page Events
+    %a.back{ :href => "#home" }
+      Events
+  .info{ :style => "font-weight: normal;" }
+#about
+  %p
+    %img{ :src => "/images/jqtouch.png" }
+  %p
+    %strong
+      jQTouch
+    %br
+    Version 1.0 beta
+    %br
+    %a{ :href => "http://www.davidkaneda.com" }
+      By David Kaneda
+  %p
+    %em
+      Create powerful mobile apps with
+      %br
+      just HTML, CSS, and jQuery.
+  %p
+    %a{ :href => "#" }
+      @jQTouch on Twitter
+  %p
+    %br
+    %br
+    %a.grayButton.goback{ :href => "#" }
+      Close
+#ajax
+  .toolbar
+    %h1
+      AJAX
+    %a.back{ :href => "#home" }
+      Home
+  %ul
+    %li.arrow
+      %a{ :href => "#ajax_post" }
+        POST Form Example
+    %li.arrow
+      %a{ :href => "ajax.html" }
+        GET Example
+    %li.arrow
+      %a{ :href => "#callback" }
+        With Callback
+#flipdemo
+  %div{ :style => "font-size: 1.5em; text-align: center; margin: 160px 0 160px; font-family: Marker felt;" }
+    Pretty smooth, eh?
+  %a.whiteButton.goback{ :href => "#", :style => "margin:0 10px;color:rgba(0,0,0,.9)" }
+    Go back
+%form#ajax_post.form{ :action => "ajax_post.php", :method => "POST" }
+  .toolbar
+    %h1
+      Post Demo
+    %a.back{ :href => "#" }
+      Ajax
+  %ul
+    %li
+      %input{ :name => "zip", :placeholder => "Zip Code", :type => "text", :value => "" }
+  %a.submit.whiteButton{ :href => "#", :style => "margin:0 10px;color:rgba(0,0,0,.9)" }
+    Submit
+#callback
+  .toolbar
+    %h1
+      AJAX w/Callback
+    %a.back{ :href => "#" }
+      Ajax
+#ui
+  .toolbar
+    %h1
+      UI Demos
+    %a.back{ :href => "#" }
+      Home
+  %h2
+    Animation
+  %ul
+    %li
+      %a.flip{ :href => "#flipdemo" }
+        Page Flip
+  %h2
+    Lists
+  %ul
+    %li.arrow
+      %a{ :href => "#edge" }
+        Edge to Edge
+    %li.arrow
+      %a{ :href => "#plastic" }
+        Plastic
+    %li.arrow
+      %a{ :href => "#metal" }
+        Metal
+  %h2
+    Forms
+  %ul
+    %li.arrow
+      %a{ :href => "#forms" }
+        Forms
+#edge.edgetoedge
+  .toolbar
+    %h1
+      Edge to Edge
+    %a.back{ :href => "#" }
+      Back
+  %h4
+    E
+  %ul
+    %li
+      %a{ :href => "#" }
+        Elea
+        %em
+          Peliche
+    %li
+      Elizabeth
+      %em
+        Nogales
+    %li
+      %small
+        Es mi hermano
+      %a{ :href => "#" }
+        Emiliano
+        %em
+          Martín Lafuente
+    %li
+      %a{ :href => "#" }
+        Enrique
+        %em
+          Dans
+    %li
+      %a{ :href => "#" }
+        Ernesto
+        %em
+          González Aro…
+  %h4
+    F
+  %ul
+    %li
+      %a{ :href => "#" }
+        Fernández
+        %em
+          Cols Aleix
+    %li
+      %a{ :href => "#" }
+        Fernández
+        %em
+          Dominguez Alex
+    %li
+      %a{ :href => "#" }
+        Flavia
+        %em
+          Olmedo
+    %li
+      %a{ :href => "#" }
+        Francesc
+        %em
+          Esplugas
+    %li
+      %a{ :href => "#" }
+        Francisco
+        %em
+          Perez Garzón
+  %h4
+    Optional List
+  %ul
+    %li
+      %small
+        It's free
+      %a.arrow{ :href => "#" }
+        Label + minilabel
+    %li
+      %a.arrow{ :href => "#" }
+        Only arrow
+    %li
+      %small
+        ✔
+      Only labels
+    %li
+      %small
+        ☆
+      %a{ :href => "#" }
+        Only labels
+    %li
+      %small
+        ★
+      %a{ :href => "#" }
+        Only labels
+#plastic.plastic
+  .toolbar
+    %h1
+      Plastic Lists
+    %a.back{ :href => "#" }
+      Back
+  %ul
+    %li.arrow
+      %small
+        2,99€
+      %a{ :href => "#" }
+        Simple list
+    %li.arrow
+      %small
+        Free
+      %a{ :href => "#" }
+        Contact list
+    %li.arrow
+      %small
+        Open Source
+      %a{ :href => "#" }
+        Content List
+    %li.arrow
+      %small
+        35€
+      %a{ :href => "#" }
+        Metal list
+    %li
+      %a{ :href => "normal-metal.html" }
+        Metal list
+    %li.arrow
+      %a{ :href => "normal-content.html" }
+        Content List
+    %li
+      %a{ :href => "#" }
+        Download
+  .info
+    %p
+      %strong
+        Best enjoyed on a real iPhone
+#metal.metal
+  .toolbar
+    %h1
+      Metal Lists
+    %a.back{ :href => "#" }
+      Back
+  %ul
+    %li.arrow
+      %a{ :href => "#" }
+        %small
+          AM
+        9:40
+        %em
+          Buenos Aires
+    %li.arrow
+      %a{ :href => "#" }
+        %small
+          PM
+        19:40
+        %em
+          Singapur
+    %li
+      %a{ :href => "#" }
+        %small
+          PM
+        22:40
+        %em
+          Japan
+    %li.arrow
+      %a{ :href => "#" }
+        11:40
+        %em
+          New York
+    %li.arrow
+      %a{ :href => "#" }
+        9:40
+        %em
+          Ontario
+#forms
+  .toolbar
+    %h1
+      Forms
+    %a.back{ :href => "#" }
+      Back
+  %form
+    %ul.edit
+      %li
+        %input#some_name{ :name => "name", :placeholder => "Text", :type => "text" }
+      %li
+        %input#some_name{ :name => "search", :placeholder => "Search", :type => "text" }
+      %li
+        %input#some_name{ :name => "phone", :placeholder => "Phone", :type => "text" }
+      %li
+        %input#some_name{ :name => "zip", :placeholder => "Numbers", :type => "text" }
+      %li
+        %textarea
+          Textarea
+      %li
+        Sample Toggle
+        %span.toggle
+          %input{ :type => "checkbox" }
+      %li
+        %select#lol
+          %optgroup{ :label => "Swedish Cars" }
+            %option{ :value => "volvo" }
+              Volvo
+            %option{ :value => "saab" }
+              Saab
+          %optgroup{ :label => "German Cars" }
+            %option{ :value => "mercedes" }
+              Mercedes
+            %option{ :value => "audi" }
+              Audi
+      %li
+        %input#some_name{ :name => "some_name", :type => "password", :value => "iphonedelcopon" }
+      %li
+        %input#some_name{ :name => "some_name", :title => "V8 Engine Type", :type => "checkbox", :value => "Hello" }
+      %li
+        %input#some_name{ :name => "some_name", :checked => "checked", :title => "V12 Engine Type", :type => "checkbox", :value => "Hello" }
+      %li
+        %input#some_name{ :name => "some_name", :title => "Only cars", :type => "radio", :value => "Hello" }
+      %li
+        %input#some_name{ :name => "some_name", :title => "Only motorbikes", :type => "radio", :value => "Hello" }

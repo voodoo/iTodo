@@ -61,6 +61,7 @@
 
             // Set startup screen
             if (jQTSettings.startupScreen) {
+	              console.log(jQTSettings.startupScreen);
                 hairextensions += '<link rel="apple-touch-startup-image" href="' + jQTSettings.startupScreen + '" />';
             }
 
