@@ -4,6 +4,9 @@ class ItemsController < ApplicationController
     item = current_todo.items.create(:body => params[:body])
     render :partial => 'items/item', :locals => {:item => item}
   end
+  def destroy
+    current_todo.items.find(params[:id]).destroy
+  end
   def update_incomplete
     item = current_todo.items.find(params[:id]) 
     item.update_attribute(:complete, false)   

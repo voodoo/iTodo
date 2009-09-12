@@ -1,5 +1,5 @@
 module TokenGenerator
-  def generate_token(size = 12, &validity)
+  def generate_token(size = 3, &validity)
     constant = "#{self.class.name}#{id}"
  
     begin

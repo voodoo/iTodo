@@ -55,13 +55,11 @@
             // Set icon
             if (jQTSettings.icon) {
                 var precomposed = (jQTSettings.addGlossToIcon) ? '' : '-precomposed';
-								console.log(jQTSettings.icon);
                 hairextensions += '<link rel="apple-touch-icon' + precomposed + '" href="' + jQTSettings.icon + '" />';
             }
 
             // Set startup screen
             if (jQTSettings.startupScreen) {
-	              console.log(jQTSettings.startupScreen);
                 hairextensions += '<link rel="apple-touch-startup-image" href="' + jQTSettings.startupScreen + '" />';
             }
 

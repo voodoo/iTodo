@@ -1,3 +1,8 @@
-%li
+%li{:id => "li#{item.id}"}
+  .action
   %input{ :type => "checkbox", :value => item.id, :checked => item.complete }
   %span= item.body
+
+%script
+  $('.complete li, .incomplete li').addTouchHandlers().bind('swipe', swiper);    
+   

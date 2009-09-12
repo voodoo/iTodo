@@ -23,20 +23,15 @@ $(function(){
 						// });
         }
         $('input').blur();
-        $('#add .goback').click();
-
-        this.reset();
+				$('input').val('');//$el.reset();
+        $('#add .goback').click();        
         return false;
     }
     
     $('#add form').submit(submitForm);
     $('#add .whiteButton').click(submitForm);
     
-    $('.complete li, .incomplete li').addTouchHandlers().bind('swipe', function(event,info){
-       $(this).toggleClass('editingmode');
-			 console.log(info.direction);
-
-    });    
+    $('.complete li, .incomplete li').addTouchHandlers().bind('swipe', swiper);    
     
     $('input[type="checkbox"]').live('change', function(){
         var $el = $(this);
@@ -56,3 +51,21 @@ $(function(){
     });
     
 });
+
+// Needed to make this global to call it from ajax on add
+function swiper(event,info){
+	$("div.action",event.currentTarget).html("Delete").show().click(function(){
+		new Image('/images/wait.gif'); //preloader :)
+		if(confirm("Delete me?")){
+			$(this).html("<img src='/images/wait.gif'/>")
+			var id = $(this).parent().attr('id').match(/\d+$/)
+			$.ajax({
+			  type: "DELETE",
+			  url: "/items/" + id + ".js",
+			  dataType: "script"
+			});
+		} else {
+			$(this).hide();
+		}
+	})
+}
