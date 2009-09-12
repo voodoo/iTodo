@@ -1,7 +1,11 @@
 $.jQTouch({
     icon: '/images/icon.png',
-    startupScreen: '/images/startup.png'
+    startupScreen: '/images/startup.png',
+    preloadImages: [
+				'/images/wait.gif'
+        ]
 });
+
 
 // Some sample Javascript functions:
 $(function(){
@@ -10,6 +14,7 @@ $(function(){
 				var value = $('#todo', $el).val() 
         if (value.length > 1)
         {
+						// TODO append first because of delay
 						$.post("/items", {body:value}, function(data){
 							$('#home .incomplete').append($(data));
 						})

@@ -5,14 +5,14 @@ ul li {
   border-top: 1px solid #a2a14d;
   padding: 14px; }
   ul li div.action {
-    width: 60px;
     border: 1px solid #ccc;
     float: right;
     display: none;
-    height: 30px;
-    padding-top: 4px;
+    padding: 6px;
     background: pink;
-    text-align: center; }
+    text-align: center;
+    border: 1px solid firebrick;
+    -webkit-border-radius: 4px; }
   ul li input[type="checkbox"] {
     background-color: #e8a322;
     border: 2px solid #e8a322; }
